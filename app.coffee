@@ -153,7 +153,7 @@ layerA.on Events.DragEnd, ->
         properties: {scale: 1}
         layerA.html = ""
 
-# DRAGGING ALTERNATIVE
+# DRAGGING ANIMATION ALTERNATIVE
 # FOR THIS TO WORK 
 # Tuen on .bounce and .momentum
 # Dont use DragStart or DragEnd     
