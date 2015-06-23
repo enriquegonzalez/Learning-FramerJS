@@ -107,12 +107,14 @@ layerE.on Events.TouchStart, ->
 	   	properties:
 	        x:100
 	    curve: "ease-in-out"
+	    time: 0.1
  
 layerF.on Events.AnimationEnd, ->
 	layerF.animate
  		properties:
         	x:10
         curve: "ease-in-out"
+        time: 0.3
 
 # DRAGGING
 # Make the layer draggable 
