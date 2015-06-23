@@ -75,7 +75,7 @@ layerB.animate
 # Friction = the brake, more friction = more resistance
 # Velocity = initial velocity, more velocity = more push
 	curve: "spring(300,15,0)"
-	repeat: 4
+	repeat: 2
 
 # STATES
 layerH = new Layer({backgroundColor:"hsla(305, 100%, 38%, 1)", x: 80, y: 280, opacity: 0.5})
@@ -132,7 +132,7 @@ layerA.draggable.constraints = {
 }
 
 # Disable overdrag
-layerA.draggable.overdrag = false
+layerA.draggable.overdrag = true
 # Disable bounce
 layerA.draggable.bounce = false
 # Disable momentum
@@ -152,3 +152,18 @@ layerA.on Events.DragEnd, ->
     this.animate 
         properties: {scale: 1}
         layerA.html = ""
+
+# DRAGGING ALTERNATIVE
+# FOR THIS TO WORK 
+# Tuen on .bounce and .momentum
+# Dont use DragStart or DragEnd     
+# After DragEnd, the DragAnimation starts
+# layerA.on Events.DragAnimationDidStart, ->
+#     this.animate 
+#         properties: {scale: 3}
+#         layerA.html = "start"
+
+# Starts with the momentum and bounce
+# layerA.on Events.DragAnimationDidEnd, -> 
+#     this.animate 
+#         properties: {scale: 1}
